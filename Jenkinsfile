@@ -58,8 +58,8 @@ pipeline {
         stage("Docker Build & Push PACKAGE") {
             steps {
                 sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
-                sh "docker build -t macktb/restaurantlisting-service:${VERSION} ."
-                sh "docker push macktb/restaurantlisting-service:${VERSION}"
+                sh "docker build -t macktb/foodcatalogue-service:${VERSION} ."
+                sh "docker push macktb/foodcatalogue-service:${VERSION}"
             }
         }
 
