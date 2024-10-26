@@ -73,7 +73,7 @@ pipeline {
             steps {
                 checkout scmGit(branches: [[name: "*/${GIT_BRANCH}"]], extensions: [], userRemoteConfigs: [[ credentialsId: 'git-ssh', url: "${GIT_REPO}"]])
                 script {
-                    // Set the new image tag with the Jenkins build  number
+                    // Set the new image tag with the Jenkins build number
                     sh '''
 			git config user.email "d.rutzno@gmail.com"
                 	git config user.name "Rutzno"
